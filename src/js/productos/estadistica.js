@@ -35,7 +35,7 @@ const chartVentas = new Chart(context, {
 })
 
 const getEstadisticas = async () => {
-    const url = `/login_prueba/API/productos/estadistica`;
+    const url = `/datatable/API/productos/estadistica`;
     const config = {
         method : 'GET'
     }

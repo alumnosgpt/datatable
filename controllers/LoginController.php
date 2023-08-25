@@ -11,14 +11,14 @@ class LoginController {
         if(!isset($_SESSION['auth_user'])){
             $router->render('login/index', []);
         }else{
-            header('Location: /login_prueba/menu');
+            header('Location: /datatable/menu');
         }
     }
     public static function menu(Router $router){
         if(isset($_SESSION['auth_user'])){
             $router->render('menu/index', []);
         }else{
-            header('Location: /login_prueba/');
+            header('Location: /datatable/');
         }
     }
     public static function loginAPI(){
@@ -67,7 +67,7 @@ class LoginController {
         $_SESSION = [];
         session_unset();
         session_destroy();
-        header('Location: /login_prueba/');
+        header('Location: /datatable/');
     }
 
 }
