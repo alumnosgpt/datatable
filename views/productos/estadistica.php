@@ -49,7 +49,7 @@ h1 {
 <body>
 
 <div class="container">
-  <h1>ESTADISTICA DE COMPRAS POR CLIENTE</h1>
+  <h1>ESTADISTICA DE VENTA DE PRODUCTOS</h1>
   <a href="/datatable/productos/datatable" class="btn btn-link">LISTADO DE PRODUCTOS</a>
   <a href="/datatable/productos/estadistica" class="btn btn-link">GRAFICA VENTA PRODUCTOS</a>
   <a href="/datatable/clientes/index" class="btn btn-link">LISTADO DE CLIENTES</a>
