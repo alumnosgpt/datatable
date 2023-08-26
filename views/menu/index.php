@@ -52,7 +52,7 @@ h1 {
   <h1>MENU PRINCIPAL</h1>
   <a href="/datatable/productos/datatable" class="btn btn-link">LISTADO DE PRODUCTOS</a>
   <a href="/datatable/productos/estadistica" class="btn btn-link">GRAFICA VENTA PRODUCTOS</a>
-  <a href="/datatable/clientes/datatable2" class="btn btn-link">LISTADO DE CLIENTES</a>
+  <a href="/datatable/clientes/index" class="btn btn-link">LISTADO DE CLIENTES</a>
   <a href="/datatable/clientes/estadistica2" class="btn btn-link">GRAFICA VENTA CLIENTES</a>
   <a href="/datatable/logout" class="btn btn-danger">CERRAR SESIÓN</a>
 </div>
