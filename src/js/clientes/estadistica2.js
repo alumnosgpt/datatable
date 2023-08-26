@@ -1,36 +1,25 @@
 import Chart from "chart.js/auto";
 import { Toast } from "../funciones";
 
-const canvas = document.getElementById('chartVentas')
+const canvas = document.getElementById('chartCliente')
 const btnActualizar = document.getElementById('btnActualizar')
 const context = canvas.getContext('2d');
 
 
 const chartVentas = new Chart(context, {
-    type : 'line',
+    type : 'pie',
     data : {
         labels : [],
         datasets : [
             {
-                label : 'Cliente',
+                label : 'compras',
                 data : [],
                 backgroundColor : []
             },
-            // {
-            //     type: 'bar',
-            //     label : 'Existencias',
-            //     data : [3,4,5,5],
-            //     backgroundColor : [
-            //         'rgb(123,45,26)',
-            //         'rgb(12,85,126)',
-            //         'rgb(12,85,126)',
-            //         'rgb(225,45,16)',
-            //     ]
-            // }
         ]
     },
     options : {
-        indexAxis : 'y'
+        indexAxis : 'x'
     }
 })
 
@@ -43,7 +32,6 @@ const getEstadisticas = async () => {
     try {
         const respuesta = await fetch(url, config)
         const data = await respuesta.json();
-        console.log(data)
 
         chartVentas.data.labels = [];
         chartVentas.data.datasets[0].data = [];
@@ -83,5 +71,6 @@ const getRandomColor = () => {
 }
 
 getEstadisticas();
+
 
 btnActualizar.addEventListener('click', getEstadisticas )

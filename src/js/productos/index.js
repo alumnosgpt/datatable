@@ -40,8 +40,6 @@ const datatable = new Datatable('#tablaProductos', {
 
 const buscar = async () => {
 
-    // let producto_nombre = formulario.producto_nombre.value;
-    // let producto_precio = formulario.producto_precio.value;
     const url = `/datatable/API/productos/buscar`;
     const config = {
         method : 'GET'

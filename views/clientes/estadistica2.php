@@ -1,24 +1,69 @@
-<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
-    <a class="navbar-brand" href="/datatable/menu">Menú Principal</a>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #87CEEB; 
+  padding: 20px;
+  border-radius: 10px;
+}
 
-    <!-- Enlaces del menú -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/datatable/clientes">Datatable</a>
-            </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="/datatable/clientes/estadistica">Estadistica</a>
-            </li>
-        </ul>
-    </div>
-    <a href="/datatable/logout" class="btn btn-danger">Cerrar sesión</a>
-</nav>
-<h1>ESTADISTICAS DE VENTAS</h1>
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-link {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-link:hover {
+  background-color: #ccc;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>GRAFICA VENTA CLIENTES</h1>
+  <a href="/datatable/productos/datatable" class="btn btn-link">LISTADO DE PRODUCTOS</a>
+  <a href="/datatable/productos/estadistica" class="btn btn-link">GRAFICA VENTA PRODUCTOS</a>
+  <a href="/datatable/clientes/index" class="btn btn-link">LISTADO DE CLIENTES</a>
+       <a href="/datatable/clientes/estadistica2" class="btn btn-link">GRAFICA VENTA CLIENTES</a>
+  <a href="/datatable/logout" class="btn btn-danger">CERRAR SESIÓN</a>
+</div>
+
+</body>
+</html>
+
 <button id="btnActualizar" class="btn btn-info">Actualizar</button>
 <div class="row">
-    <div class="col-lg-5">
-        <canvas id="chartVentas" width="100%"></canvas>
+    <div class="col-lg-6">
+        <canvas id="chartCliente" width="100%"></canvas>
     </div>
 </div>
-<script src="<?=asset('./build/js/clientes/estadistica.js') ?>"></script>
+<script src="<?=asset('./build/js/clientes/estadistica2.js') ?>"></script>

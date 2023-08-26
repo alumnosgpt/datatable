@@ -7,30 +7,19 @@ const context = canvas.getContext('2d');
 
 
 const chartVentas = new Chart(context, {
-    type : 'bar',
+    type : 'pie',
     data : {
         labels : [],
         datasets : [
             {
-                label : 'Ventas',
+                label : 'compras',
                 data : [],
                 backgroundColor : []
             },
-            // {
-            //     type: 'bar',
-            //     label : 'Existencias',
-            //     data : [3,4,5,5],
-            //     backgroundColor : [
-            //         'rgb(123,45,26)',
-            //         'rgb(12,85,126)',
-            //         'rgb(12,85,126)',
-            //         'rgb(225,45,16)',
-            //     ]
-            // }
         ]
     },
     options : {
-        indexAxis : 'y'
+        indexAxis : 'x'
     }
 })
 

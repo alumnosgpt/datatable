@@ -5,8 +5,8 @@ const formLogin = document.querySelector('form')
 
 const login = async e => {
     e.preventDefault();
-   
-    if(!validarFormulario(formLogin)){
+
+    if (!validarFormulario(formLogin)) {
         Toast.fire({
             icon: 'info',
             title: 'Debe llenar todos los campos'
@@ -18,7 +18,7 @@ const login = async e => {
         const url = '/datatable/API/login'
 
         const body = new FormData(formLogin);
-        
+
         const headers = new Headers();
         headers.append("X-Requested-With", "fetch");
 
@@ -30,23 +30,23 @@ const login = async e => {
 
         const respuesta = await fetch(url, config);
         const data = await respuesta.json();
-        
-        const {codigo, mensaje, detalle} = data;
+
+        const { codigo, mensaje, detalle } = data;
         let icon = 'info';
-        if(codigo == 1){
+        if (codigo == 1) {
             icon = 'success'
-        }else if(codigo == 2){
+        } else if (codigo == 2) {
             icon = 'warning'
-        }else{
+        } else {
             icon = 'error'
 
         }
-        
+
         Toast.fire({
-            title : mensaje,
+            title: mensaje,
             icon
-        }).then((e)=>{
-            if(codigo == 1){
+        }).then((e) => {
+            if (codigo == 1) {
                 location.href = '/datatable/menu'
             }
         })
@@ -55,7 +55,6 @@ const login = async e => {
         console.log(error);
     }
 
-    
 }
 
-formLogin.addEventListener('submit', login );
+formLogin.addEventListener('submit', login);
